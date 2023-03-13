@@ -1,0 +1,73 @@
+/*set margin and font to entire document*/
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*set header css styles to the  document*/
+header {
+  background-color: #145f94;
+  width: 100%;
+  text-align: center;
+  padding: 1.8%;
+  height: 2%;
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 700;
+}
+
+/*set width and margin to the outer container*/
+.outer-container {
+  width: 83.2%;
+  margin: 2.2% auto;
+}
+
+/*set float and margin to the left container*/
+.left-container {
+  float: left;
+  width: 61%;
+}
+
+/*set float and margin to the right containert*/
+.right-container {
+  float: right;
+  width: 37.5%;
+}
+
+/*set border, text align, line height, border nd margin to the left network content block*/
+.network-content-block-left {
+  border: #145f94;
+  text-align: justify;
+  line-height: 1.5;
+  background-color: #f6f6f6;
+  border: solid;
+  border-color: #145f94;
+  margin-bottom: 2.3%;
+}
+/*set border, text align, line height, border nd margin to the right network content block*/
+.network-content-block-right {
+  border: #145f94;
+  text-align: justify;
+  line-height: 1.5;
+  background-color: #f6f6f6;
+  border: solid;
+  border-color: #145f94;
+  margin-bottom: 5%;
+}
+
+/*set background color, font-size, font-weight, color, text-align, padding and height to network name*/
+.network-name {
+  background-color: #145f94;
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: white;
+  text-align: left;
+  padding: 13px 30px;
+  height: 11.1 vw;
+}
+
+/*set padding and font-size to the network block content*/
+.network-block-content {
+  padding: 25px 30px 28px;
+  font-size: 1vw;
+}
