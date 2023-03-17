@@ -1,0 +1,124 @@
+/* Apply margin:0 and font to the entire html document*/
+* {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+/*align main heading to center, specify font style,size ,color and paddin*/
+.main-heading {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 57.6px;
+  color: white;
+  background-color: #42133e;
+  padding: 60.3px;
+}
+
+/*set coconut image width to max, height to 95vh, padding to 160px and prevents image stretching*/
+.coconuts-image {
+  width: 100%;
+  height: 95vh;
+  object-fit: cover;
+  padding-bottom: 107.2px;
+}
+
+/*set outer container width to 90% and mrgin to auto and text-align to center*/
+.outer {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/*set inner container as inline-block, width to 32.1%, text align to left and margin bottom to 160px*/
+.inner {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  margin-bottom: 107.2px;
+}
+
+/*apply margin */
+.inner:nth-child(3n + 2) {
+  margin-left: 30.1px;
+  margin-right: 28.1px;
+}
+
+/*apply  width as 100% image of the place*/
+.place-image {
+  width: 100%;
+}
+
+/*apply font weight, size and margin to place-name*/
+.place-name {
+  font-weight: bolder;
+  font-size: 20.1px;
+  margin-top: 18px;
+}
+
+/*apply font weight, size, margin and line-height to brief-description*/
+.brief-description {
+  font-weight: 300;
+  font-size: 40.2px;
+  text-align: left;
+  margin-top: 2%;
+  margin-bottom: 2.7px;
+  line-height: 1.2;
+}
+
+/*apply font size, margin and line-height to brief-description*/
+.description {
+  font-size: 20.1px;
+  line-height: 1.4;
+  margin-top: 35.5px;
+  margin-bottom: 13.4px;
+}
+
+/*apply background color, margin, text color, border:0 and width to read more button*/
+.read-more-button {
+  background-color: #7a1655;
+  margin-top: 5.4px;
+  color: white;
+  padding: 14.7px 23.4px 14.7px 23.4px;
+  font-size: 22.11px;
+  border: 0;
+  width: 35%;
+}
+
+/*apply font weight, size, margin and color to bottom text heading*/
+.bottom-text-heading {
+  text-align: center;
+  font-weight: 300;
+  font-size: 77px;
+  color: #850359;
+  margin-top: 1.8%;
+  margin-bottom: 2.5%;
+}
+
+/*apply font weight, size, margin,text-align,  and color to bottom text */
+.bottom-text {
+  margin: 2% 12% 5% 12%;
+  font-weight: 300;
+  font-size: 30.1px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/*apply  margin, colorand padding to footer*/
+footer {
+  text-align: left;
+  color: white;
+  background-color: #7a1655;
+  padding: 30.1px 0 30.1px 163px;
+}
+
+/*apply font weight and size to copyright text*/
+.copyright {
+  font-weight: bolder;
+  font-size: 26.8px;
+}
+
+/*apply font weight and size to all rights text*/
+.all-rights {
+  font-size: 26.6px;
+  font-weight: 300;
+}
