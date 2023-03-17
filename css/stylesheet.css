@@ -3,25 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*body background color and font-family styles*/
 body {
   background-color: #2a2b30;
   font-family: "Roboto", sans-serif;
 }
+/*logo container margin*/
 .logo-container {
   margin: 92px 0 30px 170px;
 }
 
+/*logo width*/
 .logo {
   width: 234px;
 }
-
+/*dropdown menu position and alignment*/
 .dropdown-menu {
   position: absolute;
   top: 75px;
   right: 150px;
   text-align: right;
 }
-
+/*dropdown icon stylest*/
 .dropdown-icon {
   display: inline-block;
   width: 70px;
@@ -29,7 +32,7 @@ body {
   border-radius: 50%;
   background-color: #d8d8d8;
 }
-
+/*menu list styles*/
 .menu-list {
   margin-top: 20px;
   width: 280px;
@@ -38,8 +41,8 @@ body {
   list-style: none;
   display: none;
 }
-
- li a {
+/*applying same styles to all a inside li using descendent selector*/
+li a {
   font-weight: 600;
   font-size: 16px;
   padding: 20px 0 10px 20px;
@@ -48,32 +51,37 @@ body {
   text-decoration: none;
   color: #000;
 }
- li:hover a {
+/*changing background colour  and pointer of li on hover*/
+li:hover a {
   background-color: #90b085;
+  cursor: pointer;
 }
 
+/*displaying menu list on hovering dropdown menu*/
 .dropdown-menu:hover .menu-list {
   display: block;
   position: relative;
   z-index: 1;
 }
+/*outer container margin and text align styles*/
 .outer-container {
   margin: 0 125px 100px 125px;
   text-align: center;
 }
-
+/*product styles*/
 .product {
   display: inline-block;
   width: 21%;
   margin: 32px;
 }
-
+/*product image styles*/
 .product-image {
   padding: 50px;
   height: 500px;
+  position: relative;
   background-color: #24252a;
 }
-
+/*applying styles to img inside product image using descendent selector*/
 .product-image img {
   max-height: 290px;
   max-width: 100%;
@@ -83,18 +91,18 @@ body {
   margin: 40px auto;
   object-fit: cover;
 }
-
+/*star-icon styles*/
 .star-icon {
   font-size: 25px;
   position: absolute;
   right: 25px;
   top: 23px;
   color: #90b085;
-  background-color: #24252a;
   cursor: pointer;
+  background-color: #24252a;
 }
-
-.colored-star-icon {
+/*coloured star-icon styles*/
+.colored-staricon {
   font-size: 25px;
   position: absolute;
   right: 25px;
@@ -103,11 +111,11 @@ body {
   display: none;
   background-color: #24252a;
 }
-
-.star-icon:hover ~ .colored-star-icon {
+/*coloufred star-icon displays on hover over star icon and use of adjacent selector to apply the syles*/
+.star-icon:hover ~ .colored-staricon {
   display: inline-block;
 }
-
+/*product styles*/
 .product-size {
   width: 73px;
   padding: 20px;
@@ -123,23 +131,25 @@ body {
   font-weight: 600;
 }
 
+/*product-decription styles*/
 .product-description {
   color: #fff;
   padding-top: 15px;
   text-align: left;
 }
-
+/*product-decription h2 styles*/
 .product-description h2 {
   color: #99999a;
   padding: 7px 0;
   font-size: 25px;
   font-weight: 200;
 }
+/*product-decription  h3 styles*/
 .product-description h3 {
   font-weight: 400;
   font-size: 25px;
 }
-
+/*product-decription button styles*/
 .product-description button {
   background-color: #2a2b30;
   width: 180px;
@@ -150,7 +160,7 @@ body {
   font-weight: 600;
   font-size: 18px;
 }
-
+/*product-decription button styles on hover*/
 button:hover {
   background-color: #91b186;
   color: #000;
@@ -158,6 +168,7 @@ button:hover {
   cursor: pointer;
 }
 
+/*footer properties*/
 footer {
   background-color: #000;
   position: fixed;
@@ -166,11 +177,14 @@ footer {
   bottom: 0%;
   text-align: center;
 }
-
+/*footer div styles*/
 footer div {
   color: #eee;
   padding: 50px;
   display: inline-block;
   background-color: #000;
   font-size: 26px;
+}
+footer div:hover {
+  cursor: pointer;
 }
