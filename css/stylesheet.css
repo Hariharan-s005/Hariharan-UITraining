@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2a2b30;
+  font-family: "Roboto", sans-serif;
+}
+.logo-container {
+  margin: 92px 0 30px 170px;
+}
+
+.logo {
+  width: 234px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 75px;
+  right: 150px;
+  text-align: right;
+}
+
+.dropdown-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.menu-list {
+  margin-top: 20px;
+  width: 280px;
+  text-align: left;
+  border: solid;
+  list-style: none;
+  display: none;
+}
+
+ li a {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 20px 0 10px 20px;
+  display: block;
+  background-color: #eee;
+  text-decoration: none;
+  color: #000;
+}
+ li:hover a {
+  background-color: #90b085;
+}
+
+.dropdown-menu:hover .menu-list {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.outer-container {
+  margin: 0 125px 100px 125px;
+  text-align: center;
+}
+
+.product {
+  display: inline-block;
+  width: 21%;
+  margin: 32px;
+}
+
+.product-image {
+  padding: 50px;
+  height: 500px;
+  background-color: #24252a;
+}
+
+.product-image img {
+  max-height: 290px;
+  max-width: 100%;
+  text-align: center;
+  background-color: #24252a;
+  display: inline-block;
+  margin: 40px auto;
+  object-fit: cover;
+}
+
+.star-icon {
+  font-size: 25px;
+  position: absolute;
+  right: 25px;
+  top: 23px;
+  color: #90b085;
+  background-color: #24252a;
+  cursor: pointer;
+}
+
+.colored-star-icon {
+  font-size: 25px;
+  position: absolute;
+  right: 25px;
+  top: 23px;
+  color: #90b085;
+  display: none;
+  background-color: #24252a;
+}
+
+.star-icon:hover ~ .colored-star-icon {
+  display: inline-block;
+}
+
+.product-size {
+  width: 73px;
+  padding: 20px;
+  height: 73px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -25px;
+  right: 25px;
+  background-color: #90b085;
+  color: #2a2b30;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.product-description {
+  color: #fff;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.product-description h2 {
+  color: #99999a;
+  padding: 7px 0;
+  font-size: 25px;
+  font-weight: 200;
+}
+.product-description h3 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.product-description button {
+  background-color: #2a2b30;
+  width: 180px;
+  color: #99999a;
+  padding: 15px 20px;
+  margin-top: 6px;
+  border: 1px #99999a solid;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #91b186;
+  color: #000;
+  border: #90b085 solid 1px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  bottom: 0%;
+  text-align: center;
+}
+
+footer div {
+  color: #eee;
+  padding: 50px;
+  display: inline-block;
+  background-color: #000;
+  font-size: 26px;
+}
