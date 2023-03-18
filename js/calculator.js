@@ -1,15 +1,16 @@
 let calculator = {          //Calculator object
-  add(number1, number2) {           //add
+  add : (number1, number2) => {        //add
     return number1 + number2;
-  },
-  subtract(number1, number2) {      //subtract
+  }
+  ,
+  subtract: (number1, number2)=> {    //subtract
     return number1 - number2;
   },
-  divide(number1, number2) {       //division
-    if (number2 == 0) return "Divison by zero not allowed";
-    else return number1 / number2;
+  divide:(number1, number2) =>{       //division
+    if (number2 === 0) return "Divison by zero not allowed";
+     return number1 / number2;
   },
-  multiply(number1, number2) {      //multiply
+  multiply: (number1, number2) =>{      //multiply
     return number1 * number2;
   },
 };
