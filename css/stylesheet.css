@@ -1,0 +1,199 @@
+/* margin, padding and box sizing style to entire document using universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* setting max width to all images as 100% */
+img {
+  max-width: 100%;
+}
+/* setting font family , background color and font color to the body */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+/* setting styles to email-id class */
+.email-id {
+  padding: 82px 215px;
+  font-size: 33px;
+  display: flex;
+  justify-content: flex-end;
+}
+/* setting styles to names class */
+.name {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  font-size: 205px;
+  font-weight: 100;
+}
+/* setting styles to pre inside names class */
+.name pre {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+/* setting styles to roles class */
+.role {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+  margin-top: 16px;
+  margin-bottom: 190px;
+  color: #cecece;
+}
+/* setting styles to names pre inside role class */
+.role pre {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #4b8fe2;
+  display: inline;
+}
+/* setting stlyles mobile-view-email class */
+.mobile-view-email {
+  margin-top: 30px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+/* setting styles to designer work class */
+.designer-work {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+}
+/* setting width to work images */
+.work {
+  width: 32%;
+}
+/* setting styles to big-names-text class */
+.big-names-text {
+  margin-top: 176px;
+  display: flex;
+  justify-content: center;
+  font-size: 62px;
+  color: #cecece;
+}
+/* setting styles topre inside big-names-text class */
+.big-names-text pre {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #b8e985;
+}
+/* setting styles to icons class */
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  max-height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px auto;
+  align-items: center;
+}
+/* setting styles tologo class */
+.logo {
+  height: 55px;
+}
+/* setting styles to logo-adidas class */
+.logo-adidas {
+  height: 100px;
+}
+/* setting styles to bottom-horizontal-line class */
+.bottom-horizontal-line {
+  margin-top: 365px;
+  display: flex;
+  justify-content: center;
+}
+/* setting styles to smaller-part class */
+.smaller-part {
+  color: #fff;
+  width: 40px;
+  margin-right: 40px;
+}
+/* setting styls to longer-part class */
+.longer-part {
+  display: inline-block;
+  width: 267px;
+  color: #fff;
+}
+/* setting styles to connect-with-us class */
+.connect-with-us {
+  margin: 132px 0 109px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  gap: 25px;
+  text-align: center;
+}
+/* setting styles toi and m inside connect-with-us class */
+.connect-with-us i,
+.M {
+  width: 62px;
+  height: 62px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+/* setting styles to M class */
+.M {
+  font-family: "Blaak ExtraBold PERSONAL USE", sans-serif;
+  padding: 4px;
+}
+/* setting styles to ending-text class */
+.ending-text {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 189px;
+}
+/* setting media query properties */
+@media screen and (max-width: 475px) {
+  /* mobile view styles to name class */
+  .name {
+    font-size: 65px;
+  }
+  /* mobile view styles to role class */
+  .role {
+    font-size: 35px;
+  }
+  /* mobile view styles to email-id class */
+  .email-id {
+    visibility: hidden;
+  }
+  /* mobile view styles to mobile-view-email class */
+  .mobile-view-email {
+    display: block;
+    text-align: center;
+  }
+  /* mobile view styles to designer-work class */
+  .designer-work {
+    margin-top: 40px;
+  }
+  /* mobile view styles to work class */
+  .work {
+    width: 100%;
+  }
+  /* mobile view styles to logo class */
+  .logo {
+    width: 135px;
+    object-fit: contain;
+  }
+  /* mobile view styles to logo-adidas class */
+  .logo-adidas {
+    width: 105px;
+    object-fit: contain;
+  }
+  /* mobile view styles to big-names-text class */
+  .big-names-text {
+    font-size: 35px;
+  }
+  /* mobile view styles to icons class */
+  .icons {
+    gap: 50px;
+  }
+}
