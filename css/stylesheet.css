@@ -8,12 +8,11 @@ body {
   background-color: #2a2b30;
   font-family: "Roboto", sans-serif;
 }
-/*logo container margin*/
+/*logo container styles*/
 .logo-container {
   margin: 92px 0 30px 170px;
 }
 
-/*logo width*/
 .logo {
   width: 234px;
 }
@@ -27,31 +26,34 @@ body {
 /*dropdown icon stylest*/
 .dropdown-icon {
   display: inline-block;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: #d8d8d8;
 }
 /*menu list styles*/
 .menu-list {
   margin-top: 20px;
-  width: 280px;
+  padding: 26px 0 26px 0;
+  width: 308px;
   text-align: left;
   border: solid;
   list-style: none;
   display: none;
+  background-color: #eee;
+  border-width: 0;
 }
 /*applying same styles to all a inside li using descendent selector*/
 li a {
   font-weight: 600;
-  font-size: 16px;
-  padding: 20px 0 10px 20px;
+  font-size: 19px;
+  padding: 10px 0 10px 35px;
   display: block;
-  background-color: #eee;
   text-decoration: none;
   color: #000;
+  background-color: #eee;
 }
-/*changing background colour  and pointer of li on hover*/
+
 li:hover a {
   background-color: #90b085;
   cursor: pointer;
@@ -64,7 +66,7 @@ li:hover a {
   z-index: 1;
 }
 /*outer container margin and text align styles*/
-.outer-container {
+.product-container {
   margin: 0 125px 100px 125px;
   text-align: center;
 }
@@ -81,7 +83,7 @@ li:hover a {
   position: relative;
   background-color: #24252a;
 }
-/*applying styles to img inside product image using descendent selector*/
+
 .product-image img {
   max-height: 290px;
   max-width: 100%;
@@ -101,7 +103,7 @@ li:hover a {
   cursor: pointer;
   background-color: #24252a;
 }
-/*coloured star-icon styles*/
+
 .colored-staricon {
   font-size: 25px;
   position: absolute;
@@ -118,11 +120,12 @@ li:hover a {
 /*product styles*/
 .product-size {
   width: 73px;
-  padding: 20px;
   height: 73px;
+  padding: 20px;
   border-radius: 50%;
   position: absolute;
-  bottom: -25px;
+  bottom: 0;
+  transform: translateY(50%);
   right: 25px;
   background-color: #90b085;
   color: #2a2b30;
@@ -137,19 +140,19 @@ li:hover a {
   padding-top: 15px;
   text-align: left;
 }
-/*product-decription h2 styles*/
+
 .product-description h2 {
   color: #99999a;
   padding: 7px 0;
   font-size: 25px;
   font-weight: 200;
 }
-/*product-decription  h3 styles*/
+
 .product-description h3 {
   font-weight: 400;
   font-size: 25px;
 }
-/*product-decription button styles*/
+
 .product-description button {
   background-color: #2a2b30;
   width: 180px;
@@ -168,22 +171,22 @@ button:hover {
   cursor: pointer;
 }
 
-/*footer properties*/
+/*footer styles*/
 footer {
   background-color: #000;
   position: fixed;
   width: 100%;
-  height: 10%;
   bottom: 0%;
   text-align: center;
 }
-/*footer div styles*/
+
 footer div {
   color: #eee;
-  padding: 50px;
-  display: inline-block;
+  padding: 47px 47px;
   background-color: #000;
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: 500;
+  display: inline-block;
 }
 footer div:hover {
   cursor: pointer;
