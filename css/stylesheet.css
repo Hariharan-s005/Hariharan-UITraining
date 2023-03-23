@@ -52,24 +52,24 @@ body {
 /* setting stlyles mobile-view-email class */
 .mobile-view-email {
   margin-top: 30px;
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   display: none;
 }
 /* setting styles to designer work class */
 .designer-work {
-  max-width: 80%;
+  max-width: 95%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
 }
 /* setting width to work images */
 .work {
-  width: 32%;
+  width: 26.4%;
 }
 /* setting styles to big-names-text class */
 .big-names-text {
@@ -89,19 +89,29 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
-  max-height: 80px;
   justify-content: space-between;
   align-items: center;
   margin: 120px auto;
   align-items: center;
 }
-/* setting styles tologo class */
-.logo {
+/* setting styles to logo class */
+.logo-spotify {
   height: 55px;
 }
-/* setting styles to logo-adidas class */
+.logo-audi {
+  height: 55px;
+}
 .logo-adidas {
   height: 100px;
+}
+.logo-lufthansa {
+  height: 35px;
+}
+.logo-ikea {
+  height: 55px;
+}
+.logo-mont-blanc {
+  height: 78px;
 }
 /* setting styles to bottom-horizontal-line class */
 .bottom-horizontal-line {
@@ -130,6 +140,10 @@ body {
   gap: 25px;
   text-align: center;
 }
+i,
+.M:hover {
+  cursor: pointer;
+}
 /* setting styles toi and m inside connect-with-us class */
 .connect-with-us i,
 .M {
@@ -153,47 +167,84 @@ body {
 }
 /* setting media query properties */
 @media screen and (max-width: 475px) {
-  /* mobile view styles to name class */
   .name {
     font-size: 65px;
   }
-  /* mobile view styles to role class */
+
   .role {
-    font-size: 35px;
+    font-size: 40px;
+    margin-bottom: 10px;
   }
-  /* mobile view styles to email-id class */
+
   .email-id {
     visibility: hidden;
   }
-  /* mobile view styles to mobile-view-email class */
+
   .mobile-view-email {
     display: block;
     text-align: center;
+    margin-bottom: 130px;
+    margin-top: 10px;
   }
-  /* mobile view styles to designer-work class */
+
   .designer-work {
     margin-top: 40px;
+    gap: 20px;
   }
-  /* mobile view styles to work class */
+
   .work {
-    width: 100%;
+    width: 95%;
   }
-  /* mobile view styles to logo class */
-  .logo {
-    width: 135px;
+
+  .big-names-text {
+    font-size: 35px;
+    margin-top: 89px;
+  }
+
+  .icons {
+    gap: 50px;
+    margin-top: 85px;
+  }
+  .logo-spotify {
+    width: 120px;
     object-fit: contain;
   }
-  /* mobile view styles to logo-adidas class */
+  .logo-audi {
+    width: 100px;
+    object-fit: contain;
+  }
   .logo-adidas {
+    width: 70px;
+    object-fit: contain;
+    margin-left: 20px;
+    gap: 70px;
+  }
+  .logo-lufthansa {
+    width: 133px;
+    object-fit: contain;
+  }
+  .logo-ikea {
+    width: 115px;
+    object-fit: contain;
+  }
+  .logo-mont-blanc {
     width: 105px;
     object-fit: contain;
   }
-  /* mobile view styles to big-names-text class */
-  .big-names-text {
-    font-size: 35px;
+  .bottom-horizontal-line {
+    margin-top: 185px;
   }
-  /* mobile view styles to icons class */
-  .icons {
-    gap: 50px;
+  .smaller-part {
+    width: 20px;
+  }
+  .longer-part {
+    width: 180px;
+  }
+  .connect-with-us {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  .ending-text {
+    margin-bottom: 67px;
   }
 }
