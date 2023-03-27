@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <!-- Start:body -->
+  <body>
+    <!-- Start:header  -->
+    <header>
+      <img src="img/Sirius_CDW_Cobranded_PMS2747.svg" alt="" />
+    </header>
+    <!-- End:header  -->
+    <!-- Start: form-container  -->
+    <div class="form-container">
+      <!--Start: form  -->
+      <form action="" novalidate>
+        <!--form title -->
+        <h2>BILLING DETAILS</h2>
+        <!-- first name and last name container -->
+        <div class="sub-container-single-line">
+          <div class="part-one">
+            <label for="first-name">First Name</label>
+            <input type="text" id="firstName" name="first-name" />
+            <h4 class="first-name-error"></h4>
+          </div>
+          <div class="part-two">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="lastName" name="last-name" />
+            <h4 class="last-name-error"></h4>
+          </div>
+        </div>
+        <!-- email container  -->
+        <div class="sub-container">
+          <label for="email-id">Email Address</label>
+          <input type="email" class="" id="emailId" name="email-id" />
+          <h4 class="email-error"></h4>
+        </div>
+        <!-- ContactNumber container  -->
+        <div class="sub-container">
+          <label for="ContactNumber">Contact Number</label>
+          <input type="text" class="" id="contactNumber" name="ContactNumber" />
+          <h4 class="contact-number-error"></h4>
+        </div>
+        <!-- pin code container  -->
+        <div class="sub-container">
+          <label for="PinCode">PIN Code</label>
+          <input type="text" class="" id="pinCode" name="Pin-code" />
+          <h4 class="pin-code-error"></h4>
+        </div>
+        <h2 class="card-title">PAYMENT DETAILS</h2>
+        <!-- cardnumber container  -->
+        <div class="sub-container">
+          <label for="CardNumber">Card Number</label>
+          <input type="text" class="" id="cardNumber" name="card-number" />
+          <h4 class="card-number-error"></h4>
+        </div>
+        <!-- CardExpiry and CVV container  -->
+        <div class="sub-container-single-line">
+          <div class="part-one">
+            <label for="card-expiry">Card Expiry (Year)</label>
+            <input type="text" class="" id="cardExpiry" name="card-expiry" />
+            <h4 class="card-expiry-error"></h4>
+          </div>
+          <div class="part-two">
+            <label for="CVV">CVV</label>
+            <input type="text" class="" id="CVV" name="CVV" />
+            <h4 class="CVV-error"></h4>
+          </div>
+        </div>
+        <!-- Submit button  -->
+        <button class="formButton">COMPLETE PAYMENT</button>
+        <!-- End: form -->
+      </form>
+      <!-- End: form container -->
+    </div>
+    <!-- Script tag -->
+    <script src="js/index.js"></script>
+    <!-- NoScript tag -->
+    <noscript>Enable JavaScript on your browser</noscript>
+    <!-- End: body -->
+  </body>
+</html>
