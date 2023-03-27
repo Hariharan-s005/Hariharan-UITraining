@@ -47,7 +47,7 @@ formButton.addEventListener("click", (event) => {
   if (lastName.value == "") {
     lastName.classList.add("error");
     lastNameError.innerHTML = "Last Name is required";
-  } else if (!regName.test(firstName.value)) {
+  } else if (!nameRegex.test(lastName.value)) {
     lastName.classList.add("error");
     lastNameError.innerHTML = "Last Name is not valid";
   } else {
