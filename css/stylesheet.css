@@ -1,0 +1,213 @@
+/* applying styles for desktop view */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.nav-bar {
+  padding: 15px 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px #0000001a;
+}
+
+.nav-bar h3 {
+  font-size: 20px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.user img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.user img:hover {
+  cursor: pointer;
+}
+
+.page-container {
+  display: flex;
+  justify-content: space-between;
+  width: 68%;
+  margin: 25px auto;
+  color: #222222;
+}
+
+/* sintel styles */
+.sintel {
+  width: 72.5%;
+}
+
+.sintel video {
+  max-width: 100%;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.movie-title {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.comments-seperator {
+  margin: 20px 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.reviewer-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewer-comments h3 {
+  font-size: 22px;
+}
+
+/* reviwer styles */
+.reviewer img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.reviewer {
+  display: flex;
+  gap: 15px;
+}
+
+.reviewer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review {
+  font-size: 14.5px;
+  font-weight: 300;
+}
+
+.upcoming-projects {
+  width: 25%;
+}
+
+.upcoming-projects:hover {
+  cursor: pointer;
+}
+
+.h3 {
+  font-size: 22px;
+}
+
+/* upcoming project styles */
+.upcoming-projects-posters {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upcoming-projects-posters img {
+  max-width: 100%;
+}
+
+/* chat icon styles */
+.chat-icon {
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 45px;
+  right: 30px;
+}
+
+.chat-icon img {
+  max-width: 105%;
+}
+
+.chat-icon:hover {
+  cursor: pointer;
+}
+/* footer styles */
+.fixed-footer {
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 330px 55px;
+  color: #fff;
+  background-color: #222222;
+}
+
+.footer h4 {
+  font-size: 18px;
+}
+
+/* applying media query styles */
+@media only screen and (max-width: 767px) {
+  .nav-bar {
+    padding: 12px 5%;
+  }
+
+  .user span {
+    display: none;
+  }
+
+  .page-container {
+    width: 96%;
+    flex-direction: column;
+  }
+
+  .sintel {
+    width: 100%;
+  }
+
+  .upcoming-projects {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 30px 25%;
+    flex-direction: column;
+  }
+
+  .footer h4:last-child {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .fixed-footer {
+    display: none;
+  }
+}
