@@ -1,0 +1,153 @@
+/* applying margin, padding and box sizing to the entire document through universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* applying background image , font color styles to body */
+body {
+  background-image: url("/images/background-image.png");
+  background-size: cover;
+  font-family: "Roboto Condensed", sans-serif;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  background-color: #0000004d;
+  background-blend-mode: multiply;
+}
+
+/* applying styles to the heading */
+.heading {
+  position: absolute;
+  text-align: center;
+  font-size: 99px;
+  font-weight: 800;
+  margin: 54px 770px;
+  text-align: center;
+}
+/* applying styles to the year text */
+.year-text {
+  margin-right: 90px;
+}
+/* applying styles to part one of year text */
+.part-one {
+  transform: rotate(-90deg);
+  position: absolute;
+  display: flex;
+  top: 413px;
+  right: -30px;
+  font-size: 55px;
+  font-weight: 800;
+}
+/* applying styles to part two of year text */
+.part-two {
+  transform: rotate(-90deg);
+  position: absolute;
+  display: flex;
+  letter-spacing: 8px;
+  top: 170px;
+  right: -42px;
+  font-size: 144px;
+  font-weight: 800;
+}
+.part-two-seven {
+  font-family: sans-serif;
+  transform: rotate(-90deg);
+  position: absolute;
+  display: flex;
+  letter-spacing: 8px;
+  top: 5px;
+  right: 34px;
+  font-size: 144px;
+  font-weight: 800;
+}
+
+/* applying styles to main-text */
+.main-text {
+  position: relative;
+  font-weight: 800;
+}
+/* applying styles to first line */
+.first-line {
+  position: absolute;
+  top: 68vh;
+  left: 660px;
+  font-size: 140px;
+}
+/* applying styles to second line */
+.second-line {
+  position: absolute;
+  top: 78.5vh;
+  left: 660px;
+  font-size: 178px;
+  letter-spacing: 5px;
+}
+/* applying styles to menu-bar*/
+.menu-bar {
+  position: relative;
+  width: 108px;
+  height: 106px;
+  font-size: 40px;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  top: 54px;
+  background-color: #000;
+}
+/* applying styles to menu-icon */
+.menu-icon {
+  position: absolute;
+  top: 30px;
+}
+.menu-icon hr{
+  color: #fff;
+  width: 40px;
+  height: 4px;
+  background-color:#fff;
+  border-radius: 10%;
+  margin-top: 6px;
+}
+/* applying styles to menu*/
+.menu {
+  position: absolute;
+  top: 50px;
+  left: -319px;
+  width: 319px;
+  height: 900px;
+  margin-top: 48px;
+  border-radius: 0 30px 30px 0;
+  transition: transform 1s;
+  background-color: #000;
+}
+/* applying  transform property to menu  on hover over menu bar */
+.menu-bar:hover .menu {
+  transform: translateX(319px);
+}
+/* applying  transform property to menu on hover  */
+.menu :hover {
+  transform: translate(0, 0);
+}
+/* applying styles to hat-varities */
+.hat-varities {
+  font-size: 26px;
+  line-height: 55px;
+  text-align: center;
+}
+/* applying cursor pointer style to all div inside hat-varities */
+.hat-varities div {
+  cursor: pointer;
+}
+/* applying margin  to hat image */
+.hat-image {
+  margin: 50px 0 10px 100px;
+}
+/* applying styles to connect-with-us icons */
+.connect-with-us {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  font-size: 45px;
+}
+i:hover{
+  cursor: pointer;
+}
