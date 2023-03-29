@@ -29,10 +29,10 @@ body {
 }
 
 .friend-card {
-  width: 32.65%;
+  width: calc((100% - 34px)/3);
   background-color: #4d67b4;
   display: flex;
-  align-items: center;
+ 
 }
 
 .profile-picture {
@@ -50,12 +50,14 @@ body {
 }
 
 .friends-information {
+  position: relative;
+  top:30px;
   font-weight: 500;
   font-size: 22px;
 }
 
-.full-name{
- font-weight: 400;
+.full-name {
+  font-weight: 400;
 }
 
 .email-address {
@@ -63,10 +65,4 @@ body {
   font-size: 16px;
 }
 
-footer {
-  height: 40px;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
-  background-color: #fff;
-}
+

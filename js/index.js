@@ -6002,27 +6002,34 @@ const friendsList = [
 ];
 
 // returns an element object whose id matches the string passed
-friendCards = document.getElementById("friend-list");
-individualFriendCard = "";
-
-// creating the cards 
+let friendCards = document.getElementById("friend-list");
+let friendCardsFragment = document.createDocumentFragment();
 for (let friendDetails of friendsList) {
-  individualFriendCard +=
-    '<div class="friend-card"><div class="profile-picture">';
-  individualFriendCard +=
-    '<img src="' + friendDetails.img + '" alt="Profile picture" /></div>';
-  individualFriendCard += '<div class="friends-information">';
-  individualFriendCard +=
-    '<h4 class="full-name">' +
-    friendDetails.first_name +
-    " " +
-    friendDetails.last_name +
-    "</h4>";
-  individualFriendCard +=
-    '<h4 class="email-address">' +
-    friendDetails.email +
-    "</h4></div></div>";
-}
+  let friendCard = document.createElement("div");
+  friendCard.className = "friend-card";
 
-// return text content of the element friendCards
-friendCards.innerHTML = individualFriendCard;
+  let profilePicture = document.createElement("div");
+  profilePicture.className = "profile-picture";
+  friendCard.append(profilePicture);
+
+  let profileImage = document.createElement("img");
+  profileImage.src = friendDetails.img;
+  profilePicture.append(profileImage);
+
+  let friendInformation = document.createElement("div");
+  friendInformation.className = "friends-information";
+  friendCard.append(friendInformation);
+
+  let fullName = document.createElement("h4");
+  fullName.className = "full-name";
+  fullName.innerHTML = friendDetails.first_name + " " + friendDetails.last_name;
+  friendInformation.append(fullName);
+
+  let emailAddress = document.createElement("h4");
+  emailAddress.className = "email-address";
+  emailAddress.innerHTML = friendDetails.email;
+  friendInformation.append(emailAddress);
+
+  friendCardsFragment.append(friendCard);
+}
+friendCards.append(friendCardsFragment);
