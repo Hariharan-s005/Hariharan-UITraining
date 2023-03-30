@@ -5,22 +5,24 @@
   box-sizing: border-box;
 }
 
+/* body styles */
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
 }
-
-.nav-bar {
+/* nav styles */
+nav {
   width: 100%;
   background-color: #3b1c67;
 }
 
-.nav-bar h3 {
+nav h3 {
   padding: 42px 0px 42px 40px;
   font-weight: 200;
   font-size: 30px;
 }
 
+/* friends-cards styles */
 .friends-cards {
   display: flex;
   flex-wrap: wrap;
@@ -28,6 +30,7 @@ body {
   gap: 17px;
 }
 
+/* friend-card styles */
 .friend-card {
   width: calc((100% - 34px)/3);
   background-color: #4d67b4;
@@ -35,6 +38,7 @@ body {
  
 }
 
+/* profile-picture styles */
 .profile-picture {
   height: 85px;
   width: 85px;
@@ -49,6 +53,7 @@ body {
   height: 100%;
 }
 
+/* friends-information styles */
 .friends-information {
   position: relative;
   top:30px;
@@ -56,10 +61,11 @@ body {
   font-size: 22px;
 }
 
+/* full-name styles */
 .full-name {
   font-weight: 400;
 }
-
+/* email-address styles */
 .email-address {
   font-weight: 100;
   font-size: 16px;
