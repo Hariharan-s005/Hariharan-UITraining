@@ -1,125 +1,69 @@
 const formButton = document.querySelector(".formButton");
 formButton.addEventListener("click", (event) => {
   event.preventDefault();
+  // validate object containing regex, and error message for each input field type
+  const validate = {
+    firstName: {
+      regex: /^[a-zA-Z]{1,30}$/,
+      isEmpty: "First Name is required",
+      isInvalid: "First Name is not valid",
+    },
+    lastName: {
+      regex: /^[a-zA-Z]{1,30}$/,
+      isEmpty: "Last Name is required",
+      isInvalid: "Last Name is not valid",
+    },
+    emailId: {
+      regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      isEmpty: "Email Address is required",
+      isInvalid: "Email Address is not valid",
+    },
+    contactNumber: {
+      regex: /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/,
+      isEmpty: "Contact Number is required",
+      isInvalid: "Contact Number is not valid",
+    },
+    pinCode: {
+      regex: /^\d{6}$/,
+      isEmpty: "PIN Code is required",
+      isInvalid: "PIN Code is not valid",
+    },
+    cardNumber: {
+      regex: /^\d{16}$/,
+      isEmpty: "Card Number is required",
+      isInvalid: "Card Number is not valid",
+    },
+    cardExpiry: {
+      regex:
+        /^(?:20(?:2[3-9]|[3-9][0-9])|2[1-9][0-9][0-9]|[3-9][0-9][0-9][0-9])$/,
+      isEmpty: "Card Expiry is required",
+      isInvalid: "Card Expiry is not valid",
+    },
+    cvv: {
+      regex: /^[0-9]{3,4}$/,
+      isEmpty: "CVV is required",
+      isInvalid: "CVV is not valid",
+    },
+  };
 
-  //returns the first Element that matches the specified selector
-  const firstName = document.querySelector("#firstName");
-  const lastName = document.querySelector("#lastName");
-  const emailId = document.querySelector("#emailId");
-  const contactNumber = document.querySelector("#contactNumber");
-  const pinCode = document.querySelector("#pinCode");
-  const cardNumber = document.querySelector("#cardNumber");
-  const cardExpiry = document.querySelector("#cardExpiry");
-  const CVV = document.querySelector("#CVV");
+  // storing all input and h4
+  const inputTextBox = document.querySelectorAll("input");
+  const errorMessage = document.querySelectorAll("h4");
 
-  const firstNameError = document.querySelector(".first-name-error");
-  const lastNameError = document.querySelector(".last-name-error");
-  const emailIDError = document.querySelector(".email-error");
-  const contactNumberError = document.querySelector(".contact-number-error");
-  const pinCodeError = document.querySelector(".pin-code-error");
-  const cardNumberError = document.querySelector(".card-number-error");
-  const cardExpiryError = document.querySelector(".card-expiry-error");
-  const CVVError = document.querySelector(".CVV-error");
+  // displaying the specific error messsage for each type of error
+  for (let i = 0; i < inputTextBox.length; i++) {
+    let type = inputTextBox[i].getAttribute("id");
+    let regex = validate[type].regex;
 
-  //regular expressions
-  let nameRegex = /^[a-zA-Z]{1,30}$/;
-  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  let contactNumberRegex = /^\d{10}$/;
-  let pincodeRegex = /^\d{6}$/;
-  let CardnumberRegex = /^\d{16}$/;
-  let CardExpiryRegex =
-    /^(?:20(?:2[3-9]|[3-9][0-9])|2[1-9][0-9][0-9]|[3-9][0-9][0-9][0-9])$/;
-  let CVVRegex = /^\d{3}$/;
-
-  //Validation for First Name
-  if (firstName.value == "") {
-    firstName.classList.add("error");
-    firstNameError.innerHTML = "First Name is required";
-  } else if (!nameRegex.test(firstName.value)) {
-    firstName.classList.add("error");
-    firstNameError.innerHTML = "First Name is not valid";
-  } else {
-    firstName.classList.remove("error");
-    firstNameError.innerHTML = "";
-  }
-
-  //Validation for Last Name
-  if (lastName.value == "") {
-    lastName.classList.add("error");
-    lastNameError.innerHTML = "Last Name is required";
-  } else if (!nameRegex.test(lastName.value)) {
-    lastName.classList.add("error");
-    lastNameError.innerHTML = "Last Name is not valid";
-  } else {
-    lastName.classList.remove("error");
-    lastNameError.innerHTML = "";
-  }
-
-  //Validation for email
-  if (emailId.value == "") {
-    emailId.classList.add("error");
-    emailIDError.innerHTML = "Email Address is required";
-  } else if (!emailRegex.test(emailId.value)) {
-    emailId.classList.add("error");
-    emailIDError.innerHTML = "Email Address is not valid";
-  } else {
-    emailId.classList.remove("error");
-    emailIDError.innerHTML = "";
-  }
-
-  //validation for ContactNumber
-  if (contactNumber.value == "") {
-    contactNumber.classList.add("error");
-    contactNumberError.innerHTML = "Contact Number is required";
-  } else if (!contactNumberRegex.test(contactNumber.value)) {
-    contactNumber.classList.remove("error");
-    contactNumberError.innerHTML = "Contact Number is not valid";
-  } else {
-    contactNumber.classList.remove("error");
-    contactNumberError.innerHTML = "";
-  }
-  //Validation for Pincode
-  if (pinCode.value == "") {
-    pinCode.classList.add("error");
-    pinCodeError.innerHTML = "PIN Code is required";
-  } else if (!pincodeRegex.test(pinCode.value)) {
-    pinCodeError.classList.add("error");
-    pinCodeError.innerHTML = "PIN Code is not valid";
-  } else {
-    pinCode.classList.remove("error");
-    pinCodeError.innerHTML = "";
-  }
-  //Validation for  Card Number
-  if (cardNumber.value == "") {
-    cardNumber.classList.add("error");
-    cardNumberError.innerHTML = "Card Number is required";
-  } else if (!CardnumberRegex.test(cardNumber.value)) {
-    cardNumber.classList.add("error");
-    cardNumberError.innerHTML = "Card Number is not valid";
-  } else {
-    cardNumber.classList.remove("error");
-    cardNumberError.innerHTML = "";
-  }
-  //Validation for CardExpiry date
-  if (cardExpiry.value == "") {
-    cardExpiry.classList.add("error");
-    cardExpiryError.innerHTML = "Card Expiry is required";
-  } else if (!CardExpiryRegex.test(cardExpiry.value)) {
-    cardExpiry.classList.add("error");
-    cardExpiryError.innerHTML = "Card Expiry is not valid";
-  } else {
-    cardExpiry.classList.remove("error");
-    cardExpiryError.innerHTML = "";
-  }
-  //Validation for CVV
-  if (CVV.value == "") {
-    CVV.classList.add("error");
-    CVVError.innerHTML = "CVV is required ";
-  } else if (!CVVRegex.test(CVV.value)) {
-    CVV.classList.add("error");
-    CVVError.innerHTML = "CVV is not valid ";
-  } else {
-    CVV.classList.remove("error");
-    CVVError.innerHTML = "";
+    if (inputTextBox[i].value == "") {
+      inputTextBox[i].classList.add("error");
+      errorMessage[i].innerHTML = validate[type].isEmpty;
+    } else if (!regex.test(inputTextBox[i].value)) {
+      inputTextBox[i].classList.add("error");
+      errorMessage[i].innerHTML = validate[type].isInvalid;
+    } else {
+      inputTextBox[i].classList.remove("error");
+      errorMessage[i].innerHTML = "";
+    }
   }
 });

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* body styles */
 body {
   font-family: "Lato", sans-serif;
   display: flex;
@@ -13,84 +13,96 @@ body {
   align-items: center;
   background-color: #f5f5f5;
 }
-
+/* header styles */
 header {
-  width: 300px;
-  height: 185px;
+  width: 320px;
+  height: 191px;
   margin-top: -45px;
   margin-bottom: 10px;
 }
-
+/* img style */
 img {
   max-width: 100%;
 }
-
+/* form-container styles */
 .form-container {
+  width: 752px;
   padding: 10px 40px;
-  box-shadow: 0px 0px 3px #e2e2e2;
+  box-shadow: -4px 2px 15px #e2e2e2;
   background-color: #fff;
 }
-
+/* h2 styles */
 h2 {
   font-size: 21px;
   font-weight: 500;
   margin-top: 36px;
+  margin-bottom: 13px;
   color: #001c72;
 }
-
+/* sub-container-single-line styles */
 .sub-container-single-line {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-
-.part-one {
-  width: 48%;
+/* part-one styles */
+.sub-container-single-line .part-one {
+  width: 321px;
   display: flex;
   flex-direction: column;
 }
-
-.part-two {
-  width: 48%;
+/* part-two styles */
+.sub-container-single-line .part-two {
+  width: 321px;
   display: flex;
   flex-direction: column;
 }
-
-input {
+/* input styles */
+.form-container input {
   height: 50px;
-  padding-left: 4px;
+  padding-left: 19px;
   border: solid 0.2px grey;
   border-radius: 5px;
 }
-
+/* sub-container styles */
 .sub-container {
   display: flex;
-  width: 560px;
+  width: 671px;
   flex-direction: column;
 }
-
+/* payment=title styles */
+.payment-title {
+  margin-top: 41px;
+}
+/* button styles*/
 button {
   width: 100%;
   padding: 15px;
   margin: 25px 0 40px;
+  font-size: 17px;
+  font-weight: 500;
   border: solid #001b71;
   border-radius: 5px;
   color: #fff;
   background-color: #001b71;
 }
 
-label {
+button:hover {
+  cursor: pointer;
+}
+/* label styles */
+.form-container label {
   font-size: 12px;
   padding: 25px 0 5px;
 }
-
-h4 {
+/* h4 styles */
+.form-container h4 {
   font-size: 12px;
-  padding: 5px;
+  padding: 5px 0px;
   font-weight: 100;
   color: #b82e2e;
 }
-
-.error {
-  border: #b82e2e 1px solid;
+/* error styles */
+.form-container .error {
+  border: 1px solid #b82e2e;
 }
