@@ -48,7 +48,11 @@ function bank() {
         );
         switch (option) {
           case "1":
-            const amount = Number(prompt("Enter the amount to be withdrawed"));
+            const amount = Number(prompt("Enter the amount to be withdrawn"));
+            if (amount < 0) {
+              alert("Please enter the amount correctly");
+              atmOperations();
+            }
             if (customerAccount.accountBalance < amount) {
               alert("*****Insuffient Funds*****\n Transaction Failed\n");
               atmOperations();
@@ -67,10 +71,14 @@ function bank() {
 
           case "2":
             const amountDeposited = Number(
-              prompt("Enter the amount for deposit")
+              prompt("Enter the amount to be deposited")
             );
+            if (amountDeposited < 0) {
+              alert("Please enter the amount correctly");
+              atmOperations();
+            }
             customerAccount.accountBalance =
-              customerAccount.accountBalance + amountde;
+              customerAccount.accountBalance + amountDeposited;
             alert(
               "Amount Rs" +
                 amountDeposited +
@@ -91,8 +99,16 @@ function bank() {
             if (oldPin == customerAccount.pin) {
               const newPin = Number(prompt("Enter the New Pin"));
               customerAccount.pin = newPin;
+              alert("****Pin successfully changed*****");
+            } else {
+              alert("Old Pin entered is wrong");
+              atmOperations();
             }
-            alert("****Pin successfully changed*****");
+            atmOperations();
+            break;
+
+          default:
+            alert("Enter the correct option");
             atmOperations();
             break;
         }
@@ -101,7 +117,10 @@ function bank() {
         customerAccount.pin != CustomerPin
       ) {
         alert("The pin entered is wrong");
-        return;
+        atmOperations();
+      } else {
+        alert("Customer card number does not exist");
+        atmOperations();
       }
     }
   }
