@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/stylesheet.css" />
-    <script type="module" src="/js/index.js" defer></script>
   </head>
   <!-- Start:body -->
   <body>
     <!--Start:nav-bar-->
-    <nav class="nav-bar">
+    <nav>
       <h3>Blender Movies</h3>
       <div class="user">
         <span>Steffy Jerry</span>
@@ -20,7 +25,9 @@
     <!--End:nav-bar-->
     <!--Start:page container -->
     <div class="page-container">
-      <div class="sintel" id="leftSectionContainer"></div>
+      <div class="sintel" id="leftSectionContainer">
+        <img src="/img/play-icon.png" alt="" id="play" />
+      </div>
       <div class="comments-seperator"></div>
       <div class="upcoming-projects" id="upcomingProjectsContainer"></div>
     </div>
@@ -28,14 +35,14 @@
     <div class="chat-icon">
       <a href="#"><img src="img/chat-icon.png" alt="Chatbot Icon" /></a>
     </div>
-    <!-- Fixed footer -->
-    <footer class="fixed-footer"></footer>
     <!--Start:footer -->
-    <footer class="footer">
+    <footer>
       <h4>&copy; Copyrights 2022</h4>
       <h4>Blender Movies</h4>
     </footer>
     <!--End:footer -->
+    <!-- IMPORT: script -->
+    <script type="module" src="/js/index.js"></script>
     <noscript>Enable JavaScript on your browser</noscript>
     <!-- End:body -->
   </body>

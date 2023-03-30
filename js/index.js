@@ -1,89 +1,117 @@
 /*Importing json files */
-import videoJsonContent from "/js/video.json" assert { type: "json" };
-import posterJsonContent from "/js/posters.json" assert { type: "json" };
+import videoJsonContents from "/js/video.json" assert { type: "json" };
+import posterJsonContents from "/js/posters.json" assert { type: "json" };
 
-let leftSectionContainer = document.getElementById("leftSectionContainer");
-let upcomingProjectsContainer = document.getElementById(
-  "upcomingProjectsContainer"
-);
+document.addEventListener("DOMContentLoaded", () => {
+  let leftSectionContainer = document.getElementById("leftSectionContainer");
+  let upcomingProjectsContainer = document.getElementById(
+    "upcomingProjectsContainer"
+  );
 
-(function () {
+  // Set play button to the video
+  document.getElementById("play").addEventListener("click", function () {
+    document.getElementById("video").play();
+    document.getElementById("video").setAttribute("controls", "");
+    let playIcon = document.getElementById("play");
+    if (playIcon.style.display == "none") {
+      playIcon.style.display = "block";
+    } else {
+      playIcon.style.display = "none";
+    }
+  });
+
+  //creating html elements with the class name specified
   let video = document.createElement("video");
-  video.src = videoJsonContent.videoUrl;
-  video.poster = videoJsonContent.poster;
+  video.id = "video";
+  video.src = videoJsonContents.videoUrl;
+  video.poster = videoJsonContents.poster;
   leftSectionContainer.append(video);
-  video.controls = true;
 
   let movieDetails = document.createElement("div");
   movieDetails.className = "movie-details";
   leftSectionContainer.append(movieDetails);
 
-  let movieTitle = document.createElement("p");
+  let movieTitle = document.createElement("span");
   movieTitle.className = "movie-title";
-  movieTitle.innerHTML = videoJsonContent.title;
-  movieDetails.appendChild(movieTitle);
+  movieTitle.innerHTML = videoJsonContents.title;
+  movieDetails.append(movieTitle);
 
   let movieDescription = document.createElement("p");
   movieDescription.className = "movie-description";
-  movieDescription.innerHTML = videoJsonContent.description;
-  movieDetails.appendChild(movieDescription);
+  movieDescription.innerHTML = videoJsonContents.description;
+  movieDetails.append(movieDescription);
 
   let commentsSeperator = document.createElement("div");
   commentsSeperator.className = "comments-seperator";
-  leftSectionContainer.appendChild(commentsSeperator);
+  leftSectionContainer.append(commentsSeperator);
 
   let reviewerCommentsContainer = document.createElement("div");
   reviewerCommentsContainer.className = "reviewer-comments";
-  leftSectionContainer.appendChild(reviewerCommentsContainer);
+  leftSectionContainer.append(reviewerCommentsContainer);
 
   let movieCommentsHeading = document.createElement("h3");
+  movieCommentsHeading.className = "comments";
   movieCommentsHeading.innerHTML = "Comments";
-  reviewerCommentsContainer.appendChild(movieCommentsHeading);
+  reviewerCommentsContainer.append(movieCommentsHeading);
 
+  // creating document fragment for reviewContainer
   let reviewContainerDocumentFragment = document.createDocumentFragment();
 
-  for (let comments of videoJsonContent.comments) {
-    console.log(comments.image);
-    let reviewerContainer = document.createElement("div");
-    reviewerContainer.className = "reviewer";
+  //function for apending reviewerContainer elements
+  let appendReviewerContainer = () => {
+    for (let comments of videoJsonContents.comments) {
+      //creating html elements with the class name specified
+      let reviewerContainer = document.createElement("div");
+      reviewerContainer.className = "reviewer";
 
-    let reviewerImage = document.createElement("img");
-    reviewerImage.src = comments.image;
-    reviewerImage.alt = comments.name;
-    reviewerContainer.appendChild(reviewerImage);
+      // appending elements to the container
+      let reviewerImage = document.createElement("img");
+      reviewerImage.src = comments.image;
+      reviewerImage.alt = comments.name;
+      reviewerContainer.append(reviewerImage);
 
-    let reviewerDetails = document.createElement("div");
-    reviewerDetails.className = "reviewer-details";
-    reviewerContainer.appendChild(reviewerDetails);
+      let reviewerDetails = document.createElement("div");
+      reviewerDetails.className = "reviewer-details";
+      reviewerContainer.append(reviewerDetails);
 
-    let reviewerName = document.createElement("h5");
-    reviewerName.className = "reviewer-name";
-    reviewerName.innerHTML = comments.name;
-    reviewerDetails.appendChild(reviewerName);
+      let reviewerName = document.createElement("h5");
+      reviewerName.className = "reviewer-name";
+      reviewerName.innerHTML = comments.name;
+      reviewerDetails.append(reviewerName);
 
-    let review = document.createElement("p");
-    review.className = "review";
-    review.innerHTML = comments.comment;
-    reviewerDetails.appendChild(review);
-    reviewContainerDocumentFragment.appendChild(reviewerContainer);
-  }
+      let review = document.createElement("p");
+      review.className = "review";
+      review.innerHTML = comments.comment;
+      reviewerDetails.append(review);
+      reviewContainerDocumentFragment.append(reviewerContainer);
+    }
+  };
 
-  reviewerCommentsContainer.appendChild(reviewContainerDocumentFragment);
+  //function for appending upcoming projects
+  let appendUpcomingprojects = () => {
+    let upcomingProjectsTitle = document.createElement("h3");
+    upcomingProjectsTitle.innerHTML = "Upcoming Projects";
+    upcomingProjectsContainer.append(upcomingProjectsTitle);
 
-  let upcomingProjectsTitle = document.createElement("h3");
-  upcomingProjectsTitle.innerHTML = "Upcoming Projects";
-  upcomingProjectsContainer.appendChild(upcomingProjectsTitle);
+    let upcomingProjectsPosters = document.createElement("div");
+    upcomingProjectsPosters.className = "upcoming-projects-posters";
 
-  let upcomingMoviesPosters = document.createElement("div");
-  upcomingMoviesPosters.className = "upcoming-projects-posters";
+    let posterImageDocumentFragment = document.createDocumentFragment();
+    for (let poster of posterJsonContents) {
+      let posterPicture = document.createElement("img");
+      posterPicture.alt = poster.title;
+      posterPicture.src = poster.imageUrl;
+      posterImageDocumentFragment.append(posterPicture);
+    }
+    // Appending to upcomingProjectsContainer
+    upcomingProjectsPosters.append(posterImageDocumentFragment);
+    upcomingProjectsContainer.append(upcomingProjectsPosters);
+  };
 
-  let posterImageDocumentFragment = document.createDocumentFragment();
-  for (let poster of posterJsonContent) {
-    let posterPicture = document.createElement("img");
-    posterPicture.alt = poster.title;
-    posterPicture.src = poster.imageUrl;
-    posterImageDocumentFragment.appendChild(posterPicture);
-  }
-  upcomingMoviesPosters.appendChild(posterImageDocumentFragment);
-  upcomingProjectsContainer.appendChild(upcomingMoviesPosters);
-})();
+  appendReviewerContainer();
+
+  //Appending the document fragment to reviwerCommentsContainer
+  reviewerCommentsContainer.append(reviewContainerDocumentFragment);
+
+  appendUpcomingprojects();
+});
