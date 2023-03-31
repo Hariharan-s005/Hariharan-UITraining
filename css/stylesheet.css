@@ -4,14 +4,19 @@
   margin: 0px;
   box-sizing: border-box;
 }
-
+/* styles to the panel */
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  box-shadow: #808080 0px 1px 6px 0px;
+}
+/* styles for logo */
 .logo {
   position: relative;
   left: 850px;
   top: -47px;
   width: 310px;
 }
-
+/* styles for tabs */
 #tabs {
   width: 36.5%;
   position: absolute;
@@ -21,7 +26,7 @@
   height: 800px;
   border-width: 0;
 }
-
+/* styles for section-tab-button */
 .section-tab-button {
   border: none;
   background-color: #fff;
@@ -39,10 +44,12 @@
 .section-tab-button a:hover {
   cursor: pointer;
 }
+
 #tabs li {
   margin-right: 15px;
 }
 
+/* styles for about-us */
 #about-us p {
   font-size: 16px;
   font-weight: 100;
@@ -54,34 +61,25 @@
   width: 100%;
 }
 
+/* styles for solutions */
+#solutions {
+  height: 700px;
+}
+
+/* styles for accordian */
+#accordion h3 {
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 12px;
+  background: #808eb9;
+}
+
 #accordion div {
-  height: 150px;
+  height: 120px;
 }
 
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-button,
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-  border: 1px solid;
-  border-radius: 5px 5px 0 0;
-  color: #fff;
-  background: #111;
-}
-
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-  border: 1px solid #001c72;
-  border-radius: 5px 5px 0 0;
-  color: #fff;
-  background: #001c72;
-}
-
+/* styles for a  inside tab by default */
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited,
@@ -93,29 +91,43 @@ a:visited.ui-button,
   color: #fff;
 }
 
-#solutions {
-  height: 700px;
+/* styles for tab on default */
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: 1px solid;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  background: #111;
+}
+/* styles for tab on active */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border: 1px solid #001c72;
+  background: #001c72;
 }
 
-#accordion h3 {
-  border-radius: 0;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 12px 12px;
-  background: #808eb9;
-}
-
+/* accordian content styles */
 .ui-accordion .ui-accordion-content {
   padding: 15px 15px;
   border-top: 0;
   font-size: 13px;
 }
 
+/* locations content style */
 #locations {
   max-height: 600px;
   overflow: scroll;
 }
 
+/* table styles */
 table {
   width: 100%;
   padding: 5px 7px;
@@ -147,11 +159,6 @@ table tr:nth-child(even) {
 
 table tr:nth-child(odd) {
   background-color: #eeeeee;
-}
-
-.ui-tabs .ui-tabs-panel {
-  display: block;
-  box-shadow: #808080 0 0 2px;
 }
 
 table img {
